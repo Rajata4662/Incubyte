@@ -1,6 +1,9 @@
-
-
-public class Calculator {
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*; 
+class HelloWorld {
+    
+    
 
 	public static int add(String text){
 		if(text.equals("")){
@@ -21,6 +24,7 @@ public class Calculator {
 	private static int toInt(String number){
 		return Integer.parseInt(number);
 	}
+
 
 	private static String[] splitNumbers(String numbers, String divider){
 	    return numbers.split(divider);
@@ -44,7 +48,17 @@ public class Calculator {
 		if(!negString.equals("")){
 			throw new IllegalArgumentException("Negatives not allowed: " + negString);
 		}
-
 		return total;
+    }
+
+    
+    public static void main(String[] args) {
+        HelloWorld obj = new HelloWorld();
+        Scanner sc= new Scanner(System.in);  //System.in is a standard input stream  
+System.out.print("Enter a string: ");  
+String str= sc.next();   //reads string before the space  
+        System.out.println(str);
+        System.out.println(obj.add(str));
+       
     }
 }
