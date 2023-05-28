@@ -3,7 +3,7 @@
 import java.util.*; 
 class HelloWorld {
     
-    
+ 
 
 	public static int add(String text){
 		if(text.equals("")){
