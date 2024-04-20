@@ -1,0 +1,10 @@
+
+import package com.example.demo.ProductController;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@RestController
+public class ProductController
+{
+@GetMapping("/products");
