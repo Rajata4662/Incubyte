@@ -9,7 +9,7 @@ import java.util.UUID;
 public class ProdcutResponseDTO {
 
 
-    private UUID id1;
+    private int id;
     private String title;
 
 
