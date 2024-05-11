@@ -1,4 +1,4 @@
-package com.example.demo.controller.ControllerAdvice;
+/*package com.example.demo.controller.ControllerAdvice;
 
 
 import org.springframework.http.HttpStatus;
@@ -19,3 +19,4 @@ String exceptionResponse = "error"+ex.getMessage() + ".code:" + HttpStatus.INTER
     }
 
 }
+*/

@@ -2,6 +2,7 @@ package com.example.demo.controller.ControllerAdvice;
 
 
 import com.example.demo.controller.ControllerAdvice.ControllerAdvice;
+import com.example.demo.dto.ErrorResponseDTO;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -10,11 +11,14 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 class GlobalControllerAdvice {
 
 
-    @ExceptionHandler(value = NullPointerException.class)
-    public ResponseEntity<String> handleNullPointerexception(@org.jetbrains.annotations.NotNull Exception ex)
+    @ExceptionHandler(value = ProductNotFoundException.class)
+    public ResponseEntity<ErrorResponseDTO> ProductNotFoundException(Exception ex)
     {
+        ErrorResponseDTO errorResponse = new ErrorResponseDTO();
+        errorResponse.setMessage(ex.getMessage());
+        errorResponse.setMessageCode("404");
         String exceptionResponse = "error"+ex.getMessage() + ".code:" + HttpStatus.INTERNAL_SERVER_ERROR;
-        return ResponseEntity.ok(exceptionResponse);
+        return ResponseEntity.ok(errorResponse);
 
     }
 
